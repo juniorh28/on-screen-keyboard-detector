@@ -9,7 +9,7 @@ import { subscribe, isSupported } from './src/osk-detector.js';
 if (isSupported()) {
 	const onOSKVisibilityChange = subscribe;
 	const unsubscribe = onOSKVisibilityChange((visibilityState) => {
-		console.log(`OSK ${visibilityState}`);
+		alert(`OSK ${visibilityState}`);
 		document.documentElement.style.setProperty(
 			'background-color',
 			visibilityState === 'visible' ? 'lightblue' : 'inherit'
